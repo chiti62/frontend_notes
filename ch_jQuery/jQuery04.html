@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script>
+        function fnAddAttr() {
+            $("#img_dog").attr("style", "opacity: 0.5");
+        }
+        function fnRemoveAttr() {
+            $("#img_dog").removeAttr("style");
+        }
+    </script>
+</head>
+
+<body>
+    <input type="button" value="新增屬性" onclick="fnAddAttr();" />
+    <input type="button" value="刪除屬性" onclick="fnRemoveAttr();" />
+    <p><img src="images/dog.png" id="img_dog" /></p>
+</body>
+
+</html>

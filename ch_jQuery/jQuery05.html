@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script>
+        function fnSend() {
+            var name = $("#txt_name").val();
+            var gender = $("[name=radGender]:checked").val();
+            if (gender == 0) {
+                alert(name + "小姐，您好！");
+            } else {
+                alert(name + "先生，您好！");
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <p>姓名：<input id="txt_name" type="text"></p>
+    <p>性別：
+        <input type="radio" name="radGender" value="1" checked>男
+        <input type="radio" name="radGender" value="0">女
+    </p>
+    <p><input type="button" value="送出" id="btnSend" onclick="fnSend();" /></p>
+</body>
+
+</html>

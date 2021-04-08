@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#btn_animate").on("click", function () {
+                $("#img_dog").animate({ marginLeft: '+=50px', marginTop: '+=5px' }, "slow",
+                    function () {
+                        $("#img_dog").animate({ marginLeft: '-=50px', marginTop: '-=5px' }, "fast");
+                    }
+                );
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <p><input type="button" value="開始動畫" id="btn_animate" /></p>
+    <p><img src="images/dog.png" id="img_dog" /></p>
+</body>
+
+</html>
